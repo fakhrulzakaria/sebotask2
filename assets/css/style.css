@@ -102,6 +102,12 @@ body {
     line-height: normal;
     letter-spacing: 0.5px;
     color: #2e3831;
+    transition: .3s
+}
+
+.navbar ul li:hover {
+    opacity: unset !important;
+    cursor: pointer;
 }
 
 .navbar ul li.active {
@@ -279,6 +285,10 @@ body {
     line-height: normal;
     letter-spacing: 0.2px;
     color: rgba(46, 56, 49, .9);
+}
+
+.space-type-select select {
+    cursor: pointer;
 }
 
 .book-now {
@@ -460,13 +470,12 @@ p.space-type {
 
 .stories {
     margin-top: 83px;
+    display: flex !important;
 }
 
 .story {
+    flex: 0 0 500px;
     height: 638px;
-    width: 500px;
-    display: inline-block;
-    margin-right: 40px;
 }
 
 .story img {
@@ -547,8 +556,12 @@ p.author b {
     display: inline-block
 }
 
+.testimonials-slider {
+    display: flex !important;
+}
+
 .testimonials-item {
-    width: 480px;
+    flex: 0 0 480px;
     height: 396px;
     box-shadow: 0 13px 16px 0 rgba(67, 75, 69, 0.05);
     background-color: #ffffff;
@@ -725,6 +738,11 @@ p.author b {
     color: #ffffff;
 }
 
+.email-collaboration .search-button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
 .vase-image {
     background-image: url("../img/bitmap_10.png");
     height: 490px;
@@ -817,6 +835,11 @@ p.author b {
     padding: 13px 15px 13px 16px;
     background: #1d6861;
     margin-left: -5px;
+}
+
+.email-img:hover {
+    cursor: pointer;
+    filter: brightness(90%);
 }
 
 @media screen and (max-width: 1290px) {

@@ -401,17 +401,30 @@
 <script src="assets/vendors/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
+        $('.stories').owlCarousel({
             items: 2,
             loop: true,
             nav: true,
+            margin: 40,
             responsive: {
                 0: {
                     items: 1,
                     center: true,
                     nav: false
                 },
-                600: {
+
+                1200: {
+                    items: 2
+                }
+            }
+        });
+        $('.testimonials-slider').owlCarousel({
+            items: 3,
+            loop: true,
+            nav: true,
+            margin: 80,
+            responsive: {
+                0: {
                     items: 1,
                     center: true,
                     nav: false
