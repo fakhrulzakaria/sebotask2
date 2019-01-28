@@ -79,6 +79,10 @@ p {
     display: inline-block
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -524,12 +528,7 @@ p.author b {
     margin-top: 220px;
 }
 
-.words {
-    display: flex;
-    justify-content: flex-start
-}
-
-.words h3 {
+.testimonials h3 {
     width: 465px;
     height: 104px;
     font-size: 42px;
@@ -543,7 +542,7 @@ p.author b {
     margin-right: 145px;
 }
 
-.words p {
+.testimonials .col-xl-6 p {
     width: 520px;
     height: 75px;
     font-size: 20px;
@@ -703,7 +702,7 @@ p.author b {
 }
 
 .email-collaboration {
-    width: 370px;
+    display: flex;
 }
 
 .email-collaboration>* {
@@ -900,13 +899,13 @@ p.author b {
         height: unset;
     }
 
-    .words h3 {
+    .testimonials h3 {
         width: unset;
         height: unset;
         margin-right: 0;
     }
 
-    .words p {
+    .testimonials .col-xl-6 p {
         width: unset;
         height: unset;
     }
@@ -945,6 +944,12 @@ p.author b {
         text-align: center;
         margin: 0 auto !important
     }
+
+    .email-collaboration {
+        text-align: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
 }
 
 @media screen and (max-width: 570px) {
@@ -954,6 +959,33 @@ p.author b {
         bottom: 0;
         left: 0;
         width: 480px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .image-container {
+        width: unset;
+    }
+
+    .image-container>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .caption {
+        width: unset;
+        height: unset;
+        background-color: #1d6861;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .image-container:hover .caption {
+        opacity: 1;
     }
 }
 
@@ -973,9 +1005,13 @@ p.author b {
         height: unset;
     }
 
-    .image-container>img {
-        width: 100%;
-        height: auto;
+    .email-collaboration {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .email-collaboration .search-term {
+        width: 180px;
     }
 }
 
