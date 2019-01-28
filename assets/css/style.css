@@ -973,7 +973,7 @@ p.author b {
         height: unset;
     }
 
-    .image-container img {
+    .image-container>img {
         width: 100%;
         height: auto;
     }
