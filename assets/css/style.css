@@ -958,9 +958,24 @@ p.author b {
 }
 
 @media screen and (max-width: 450px) {
+    .section h3 {
+        width: unset;
+        height: unset;
+    }
+
+    .about .col-xl-6>p {
+        width: unset;
+        height: unset;
+    }
+
     .advantages-section h3 {
         width: unset;
         height: unset;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
     }
 }
 
