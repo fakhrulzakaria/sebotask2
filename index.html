@@ -162,11 +162,26 @@
             </div>
         </section>
         <section class="image-grid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="grid-container"></div>
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="assets/img/bitmap_8.png" alt="">
+                </div>
+                <div class="grid-item grid-item--width2 grid-item--height2">
+                    <img src="assets/img/fun-team-work-4460-x-4460.png" alt="">
+                </div>
+                <div class="grid-item grid-item--width3 grid-item--height2">
+                    <div class="button">
+                        <img src="assets/img/prev_2.svg" alt="">
+                        <img src="assets/img/next_2.svg" alt="">
                     </div>
+                    <img src="assets/img/work-meeting-4460-x-4460.png" alt="">
+                </div>
+                <div class="quotes grid-item grid-item--width4 grid-item--height2">
+                    <p>"Talent wins games, but <b>teamwork</b> and <b>intelligence</b> win championships."</p>
+                    <b>MICHAEL JORDAN</b>
+                </div>
+                <div class="grid-item grid-item--width4 grid-item--height2">
+                    <img src="assets/img/bitmap_9.png" alt="">
                 </div>
             </div>
         </section>
@@ -404,6 +419,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
 <script src="assets/vendors/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.stories').owlCarousel({
@@ -438,7 +454,12 @@
                     items: 2
                 }
             }
-        })
+        });
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: 20,
+            gutter: 30
+        });
     });
 
     function openNav() {
