@@ -467,6 +467,11 @@ p.space-type {
     color: #ffffff;
 }
 
+.image-grid {
+    padding-top: 90px;
+    padding-bottom: 200px;
+}
+
 .button {
     margin-bottom: 20px;
 }
