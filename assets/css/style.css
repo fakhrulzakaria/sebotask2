@@ -1,5 +1,10 @@
+@font-face {
+    font-family: Circular;
+    src: url('../font/CircularStd-Book.otf');
+}
+
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: Circular !important;
     outline: none;
 }
 
@@ -1422,5 +1427,33 @@ p.author b {
 
         .email-container h3 {
             text-align: center
+        }
+
+        .header-image {
+            margin-top: 20px;
+        }
+
+        .about {
+            margin-top: -200px;
+        }
+
+        .image-container {
+            margin-top: unset;
+        }
+
+        .our-blog {
+            margin-top: 60px;
+        }
+
+        .testimonials {
+            margin-top: 60px;
+        }
+
+        .advantages-section {
+            margin-top: 60px;
+        }
+
+        .footer {
+            margin-top: 60px;
         }
     }
