@@ -153,6 +153,20 @@ body {
     z-index: 9999;
 }
 
+.sidebar ul {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar li:hover {
+    cursor: pointer;
+}
+
 .close {
     position: absolute;
     top: 25px;
