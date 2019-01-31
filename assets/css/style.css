@@ -1,5 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
+    outline: none;
 }
 
 h1 {
@@ -937,6 +938,10 @@ p.author b {
     height: 390px;
 }
 
+.owl-carousel .owl-stage-outer {
+    overflow: visible !important
+}
+
 
 @media screen and (max-width: 1290px) {
     /* .header-image {
@@ -1213,6 +1218,12 @@ p.author b {
         }
     }
 
+    @media screen and (max-width: 619px) {
+        .image-grid {
+            display: none
+        }
+    }
+
     @media screen and (max-width: 575px) {
         section h3 {
             width: unset;
@@ -1234,6 +1245,12 @@ p.author b {
             bottom: 0;
             left: 0;
             width: 480px;
+        }
+    }
+
+    @media screen and (max-width: 514px) {
+        .calculations {
+            margin-right: 60px;
         }
     }
 
@@ -1277,6 +1294,13 @@ p.author b {
         }
     }
 
+    @media screen and (max-width: 453px) {
+        .calculations {
+            margin-right: 30px;
+        }
+    }
+
+
     @media screen and (max-width: 450px) {
         .section h3 {
             width: unset;
@@ -1300,5 +1324,103 @@ p.author b {
 
         .email-collaboration .search-term {
             width: 180px;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        .logo-top {
+            width: 90%;
+        }
+
+        .m-t-146 {
+            margin-top: 26px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            text-align: center;
+            padding: 0 10px 0 10px
+        }
+
+        .header p {
+            font-size: 14px;
+            text-align: center;
+            padding: 0 20px 0 20px
+        }
+
+        .form-search p {
+            font-size: 15px;
+        }
+
+        .type-select select {
+            font-size: 20px
+        }
+
+        .term-select select {
+            font-size: 20px
+        }
+
+        .space-type-select select {
+            font-size: 20px
+        }
+
+        section h6.section-title {
+            font-size: 15px
+        }
+
+        section h3 {
+            font-size: 1.625rem !important;
+        }
+
+        .about .col-xl-6>p {
+            font-size: 16px;
+        }
+
+        p.number {
+            font-size: 34px;
+        }
+
+        p.space-type {
+            font-size: 18px
+        }
+
+        p.date {
+            font-size: 15px;
+        }
+
+        p.story-title {
+            font-size: 1.625rem
+        }
+
+        p.author {
+            font-size: 18px;
+        }
+
+        .testimonials .col-xl-6 p {
+            font-size: 16px;
+        }
+
+        .testimonials-item .opinion {
+            font-size: 16px
+        }
+
+        .testimonials-item b {
+            font-size: 14px
+        }
+
+        .testimonials-item .company {
+            font-size: 14px
+        }
+
+        .advantage h5 {
+            font-size: 1.625rem
+        }
+
+        .advantage p {
+            font-size: 16px
+        }
+
+        .email-container h3 {
+            text-align: center
         }
     }
