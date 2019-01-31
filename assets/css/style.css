@@ -1457,3 +1457,23 @@ p.author b {
             margin-top: 60px;
         }
     }
+
+    @media screen and (max-width: 404px) {
+        .calculations {
+            margin-right: 20px;
+        }
+
+        .calculation img {
+            margin-right: 10px;
+        }
+    }
+
+    @media screen and (max-width: 374px) {
+        p.number {
+            font-size: 1.625rem;
+        }
+
+        p.space-type {
+            font-size: 14px
+        }
+    }
