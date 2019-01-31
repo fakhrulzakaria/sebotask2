@@ -1384,7 +1384,8 @@ p.author b {
         }
 
         section h6.section-title {
-            font-size: 15px
+            font-size: 15px;
+            text-transform: uppercase;
         }
 
         section h3 {
@@ -1469,6 +1470,10 @@ p.author b {
 
         .footer {
             margin-top: 60px;
+        }
+
+        section h6.section-title {
+            margin-bottom: 10px !important;
         }
     }
 
