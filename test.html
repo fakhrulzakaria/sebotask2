@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+    .select2-selection__arrow{
+        display: none
+    }
+
+    .select2-selection.select2-selection--single {
+        background: url('assets/img/ic-dropdown.svg') no-repeat right center !important;
+        border: none;
+        outline: none
+    }
+    .select2-container.form-control {
+        border: none;
+    }
+
+    [class^='select2'] {
+        border: none !important
+    }
+
+    .select2-container--classic .select2-results__option--highlighted[aria-selected] {
+        background: #F3F7F9;
+        color: #444;
+    }
+
+    span.select2-results {
+        padding: 14px 0 14px 0
+    }
+
+    .select2-container--classic .select2-selection--single .select2-selection__rendered {
+        padding-left: 35px;
+    }
+
+    .select2-container--classic .select2-results>.select2-results__options li {
+        padding: 12px 35px 11px
+    }
+    </style>
+</head>
+
+<body>
+    <select class="select" name="state">
+        <option value="AL">Alabama</option>
+        <option value="WY">Wyoming</option>
+        <option value="JKT">Jakarta</option>
+        <option value="PWT">Purwokerto</option>
+    </select>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.select').select2({
+            placeholder: 'Select an option',
+            minimumResultsForSearch: Infinity,
+            width: '275px',
+            theme: 'classic'
+        });
+    });
+</script>
+
+</html>

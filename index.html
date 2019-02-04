@@ -13,6 +13,78 @@
     <link rel="stylesheet" href="assets/vendors/OwlCarousel2-2.3.4/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/vendors/OwlCarousel2-2.3.4/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <style>
+        .select2-selection__arrow{
+            display: none
+        }
+
+        .select2-selection.select2-selection--single {
+            background: url('assets/img/ic-dropdown.svg') no-repeat right center !important;
+            border: none;
+            outline: none
+        }
+
+        .select2-container.form-control {
+            border: none;
+        }
+
+        [class^='select2'] {
+            border: none !important
+        }
+
+        .select2-container--classic .select2-results__option--highlighted[aria-selected] {
+            background: #F3F7F9;
+            color: #444;
+        }
+
+        span.select2-results {
+            padding: 14px 0 14px 0
+        }
+
+        .select2-container--classic .select2-results>.select2-results__options li {
+            padding: 12px 0 11px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.2px;
+            color: rgba(46, 56, 49, 0.5);
+            font-size: 22px;
+            
+        }
+
+        .select2-container--classic .select2-selection--single .select2-selection__rendered {
+            opacity: 0.9;
+            font-size: 24px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.2px;
+            color: #2e3831;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            padding-left: 0
+        }
+
+        .select2-container--classic .select2-results__option--highlighted[aria-selected] {
+            background: rgba(29, 104, 97, 0.07)
+        }
+
+        @media screen and (max-width: 930px) {
+            span.select2.select2-container.select2-container--classic {
+                width: 100% !important
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .select2-container--classic .select2-selection--single .select2-selection__rendered {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -25,7 +97,7 @@
                     </div>
                     <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-6 p-r-0 p-l-0">
                         <div class="navbar">
-                            <svg width="22" height="14" fill="black" class="menu" onclick="openNav()">
+                            <svg width="22" height="14" fill="black" class="menu" onclick="openNav()" id="toggle">
                                 <rect height="2" width="22" />
                                 <rect height="2" width="22" y="6" />
                                 <rect height="2" width="22" y="12" />
@@ -39,14 +111,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="overlay">
-                    </div>
-                    <div class="sidebar" id="myNav">
-                        <svg viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" style="opacity: .8"
-                            class="close" onclick="closeNav()">
-                            <line x1="1" y1="22" x2="22" y2="1" stroke="black" stroke-width="2" />
-                            <line x1="1" y1="1" x2="22" y2="22" stroke="black" stroke-width="2" />
-                        </svg>
+                    <div class="col-xl-12 navbar2" id="navbar2">
                         <ul>
                             <li>Home</li>
                             <li>Locations</li>
@@ -76,14 +141,14 @@
                     <div class="form-search">
                         <div class="type-select m-t-45">
                             <p>type</p>
-                            <select>
+                            <select class="type-select" name="state" id="type-select">
                                 <option>Personal</option>
                                 <option>General</option>
                             </select>
                         </div>
                         <div class="term-select m-t-45">
                             <p>term</p>
-                            <select>
+                            <select class="term-select" name="state" id="term-select">
                                 <option>Daily</option>
                                 <option>Weekly</option>
                                 <option>Monthly</option>
@@ -91,11 +156,10 @@
                         </div>
                         <div class="space-type-select m-r-0 m-t-45">
                             <p>space type</p>
-                            <select>
+                            <select class="space-type-select" name="state" id="space-type-select">
                                 <option>Creative Studio</option>
                                 <option>Meeting Room</option>
                                 <option>Event Spaces</option>
-                                <option>Country</option>
                             </select>
                         </div>
                         <div class="book-now m-r-0">
@@ -202,7 +266,12 @@
         <section class="new-image-grid">
             <div class="container">
                 <div class="row">
-
+                    <div class="col-sm-12">
+                        <div class="quotes wow fadeInUp animated" data-wow-delay="0.5s" style="visibility: visible; animation-name: fadeInUp;">
+                            <p>"Talent wins games, but <b>teamwork</b> and <b>intelligence</b> win championships."</p>
+                            <b>MICHAEL JORDAN</b>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -446,6 +515,7 @@
 <script src="assets/vendors/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.stories').owlCarousel({
@@ -486,21 +556,28 @@
             columnWidth: 20,
             gutter: 30
         });
+        $("#toggle").click(function () {
+            $("#navbar2").slideToggle();
+        });
+        $('#type-select').select2({
+            placeholder: 'Select an option',
+            minimumResultsForSearch: Infinity,
+            width: '177px',
+            theme: 'classic'
+        });
+        $('#term-select').select2({
+            placeholder: 'Select an option',
+            minimumResultsForSearch: Infinity,
+            width: '134px',
+            theme: 'classic'
+        });
+        $('#space-type-select').select2({
+            placeholder: 'Select an option',
+            minimumResultsForSearch: Infinity,
+            width: '257px',
+            theme: 'classic'
+        });
     });
-
-    function openNav() {
-        document.getElementById("myNav").style.width = "290px";
-        document.getElementById("overlay").style.display = "block";
-        var x = document.getElementsByTagName("BODY")[0];
-        x.style.overflowY = "hidden";
-    }
-
-    function closeNav() {
-        document.getElementById("myNav").style.width = "0px";
-        document.getElementById("overlay").style.display = "none";
-        var x = document.getElementsByTagName("BODY")[0];
-        x.style.overflowY = "auto";
-    }
 </script>
 
 <script>
