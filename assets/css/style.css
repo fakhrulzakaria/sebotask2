@@ -1363,6 +1363,14 @@ p.author b {
         .advantage {
             margin-top: 30px;
         }
+
+        h3.m-l-100.wow.fadeInUp.animated {
+            margin-bottom: 20px;
+        }
+
+        .advantage img {
+            margin-bottom: 15px;
+        }
     }
 
     @media screen and (max-width: 404px) {
