@@ -1355,6 +1355,14 @@ p.author b {
         section h6.section-title {
             margin-bottom: 10px !important;
         }
+
+        .advantage img {
+            width: 50px;
+        }
+
+        .advantage {
+            margin-top: 30px;
+        }
     }
 
     @media screen and (max-width: 404px) {
