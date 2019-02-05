@@ -1147,7 +1147,7 @@ p.author b {
         }
     }
 
-    @media screen and (max-width: 514px) {
+    @media screen and (max-width: 521px) {
         .calculations {
             margin-right: 60px;
         }
@@ -1193,6 +1193,12 @@ p.author b {
         }
     }
 
+    @media screen and (max-width: 461px) {
+        .calculations {
+            margin-right: 40px;
+        }
+    }
+
     @media screen and (max-width: 453px) {
         .calculations {
             margin-right: 30px;
@@ -1223,6 +1229,16 @@ p.author b {
 
         .email-collaboration .search-term {
             width: 180px;
+        }
+    }
+
+    @media screen and (max-width: 431px) {
+        p.number {
+            font-size: 34px;
+        }
+
+        p.space-type {
+            font-size: 18px
         }
     }
 
@@ -1274,14 +1290,6 @@ p.author b {
 
         .about .col-xl-6>p {
             font-size: 16px;
-        }
-
-        p.number {
-            font-size: 34px;
-        }
-
-        p.space-type {
-            font-size: 18px
         }
 
         p.date {
